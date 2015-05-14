@@ -6,27 +6,32 @@ import time
 weeks = 0
 days = 0
 hours = 0
-minutes = 00
+minutes = 0
 seconds = 0
 hundredths = 0
+mesg = c.clear + c.cyan + 'Ctrl+C to quit' + c.reset
+form = c.magenta +  ' {}-{}-{:02}:{:02}.{:02}.{:02}' + c.reset
 
-while True:
-    time.sleep(0.01)
-    print(c.clear + c.cyan + 'Ctrl+C to stop' + c.reset)
-    print(str(weeks) + '-' + str(days) + '-' + str(hours) + ':' + str(minutes) + '.' + str(seconds) + '.' + str(hundredths))
-    hundredths += 1
-    if hundredths == 100:
-        seconds += 1
-        hundredths = 0
-    if seconds == 60:
-        minutes += 1
-        seconds = 0
-    if minutes == 60:
-        hours += 1
-        minutes = 0
-    if hours == 24:
-        days += 1
-        hours = 0
-    if days == 7:
-        weeks += 1
-        days = 0
+try:
+    while True:
+        print(mesg + form.format(weeks,days,hours,minutes,seconds,hundredths))
+        time.sleep(0.01)
+        hundredths += 1
+        if hundredths == 100:
+            seconds += 1
+            hundredths = 0
+        if seconds == 60:
+            minutes += 1
+            seconds = 0
+        if minutes == 60:
+            hours += 1
+            minutes = 0
+        if hours == 24:
+            days += 1
+            hours = 0
+        if days == 7:
+            weeks += 1
+            days = 0
+except:
+    print('\b\b' + c.red + 'Later, dude!' + c.reset)
+    exit()
