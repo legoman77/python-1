@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time
+print(c.clear)
+try:
+    while True:
+        for verse in range(5):
+            for badger in range(12):
+                print("Badgers!")
+                time.sleep(0.4)
+            if verse < 4: 
+                for mushrooom in range(2):
+                    print("Muuushroom!")
+                    time.sleep(0.8)
+            time.sleep(0.38)
+            print(c.clear)
+        print('''      _______..__   __.      ___       __  ___  _______  __   __   __   __   __   __   __   __   __  
+                     /       ||  \ |  |     /   \     |  |/  / |   ____||  | |  | |  | |  | |  | |  | |  | |  | |  | 
+                    |   (----`|   \|  |    /  ^  \    |  '  /  |  |__   |  | |  | |  | |  | |  | |  | |  | |  | |  | 
+                     \   \    |  . `  |   /  /_\  \   |    <   |   __|  |  | |  | |  | |  | |  | |  | |  | |  | |  | 
+                 .----)   |   |  |\   |  /  _____  \  |  .  \  |  |____ |__| |__| |__| |__| |__| |__| |__| |__| |__| 
+                 |_______/    |__| \__| /__/     \__\ |__|\__\ |_______|(__) (__) (__) (__) (__) (__) (__) (__) (__) 
+                                                                                                               ''')
+    print(c.clear)
+except:
+    print("\b\bBadger out.")
+    exit()
