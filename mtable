@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.clear)
+
+print("Multiplication tables awaken!")
+number = input("Which number? ")
+print('Ok, here are the ' + number + ' multiplication tables.')
+
+for count in range(12,0,-1):
+    print(str(count) + " x " + number + " = " + str(int(number) * count))
