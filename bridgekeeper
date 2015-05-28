@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.clear + c.yellow + '''
+Who would cross the Bridge of Death
+Must answer me these questions three,
+'Ere the other side he see.
+''' + c.reset)
+
+def prompt(question):
+    print(question)
+    answer  = input('> ' + c.base3).lower().strip()
+    print(c.reset)
+    return answer
+
+def die():
+    print('Thou art cast into the Gorge of Eternal Peril.')
+    exit()
+def live():
+    print('Right, off you go then.')
+
+name = prompt('What is your name?')
+quest = prompt('What is your quest?')
+
+if name == 'lancelot' or name == 'galahad':
+    color = prompt('What is your favorite color?')
+    if re.search(r'\bno\b',color):
+        die()
+elif name == 'robin':
+    capital  = prompt('What is the capital of Assyria?')
+    if capital != 'aushur':
+        die()
+elif name == 'arthur':
+    swallow = prompt('What is the air speed velocity of an unladen swallow?')
+    if 'you mean' in swallow  and 'african' in swallow and 'european' in swallow:
+        print("I don't know that!")
+        print('The Bridgekeeper is cast into the Gorge of Eternal Peril.')
+    else:
+        die()
+else:
+    pass # everyone else
+
+live()
+
