@@ -42,4 +42,3 @@ else:
     pass # everyone else
 
 live()
-

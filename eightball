@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+
+answers = ['Yes','No','Maybe']
+
+try:
+    print(c.clear)
+    while True:
+        print("Welcome to the Magic Eight Ball!")
+        print("What is your question?")
+        question = input("> ")
+        if question == 'bye':
+            print('Bye!')
+            break
+        else:
+            print(random.choice(answers))
+except KeyboardInterrupt:
+    print('\b\bBye!')
