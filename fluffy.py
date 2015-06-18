@@ -1,15 +1,11 @@
-#!/usr/bin/env python3
+"""These are my pink fluffy unicorn questions."""
 
 import colors as c
 from utils import ask
-import random
 
-print(c.clear)
-print("Welcome to the quiz game!")
+intro = ("Let's test your knowledge and see what you've learned so far!")
 
-print("Let's test your knowledge and see what you've learned so far!")
-
-def q1():
+def q1():  
     answer = ask("What color is the unicorns' fur?") 
     if answer == "pink":
         return True
@@ -28,10 +24,3 @@ def q3():
     return False
 
 questions = [q1,q2,q3]
-while questions:
-    question = random.choice(questions)
-    answer = question()
-    if answer:
-        questions.remove(question)
-
-

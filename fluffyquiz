@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+
+print(c.clear)
+print("Which quiz do you want: Fluffy or Rees?")
+chosen_quiz = input("> ")
+
+if chosen_quiz == "fluffy":
+    import fluffy as quiz
+if chosen_quiz == "rees":
+    import myquiz as quiz
+
+print(c.clear)
+print(quiz.intro)
+
+while quiz. questions:
+    question_function = random.choice(quiz.questions)
+    is_correct = question_function()
+    if is_correct:
+        quiz.questions.remove(question_function)
+
+
