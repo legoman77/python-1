@@ -6,7 +6,7 @@ from utils import ask
 intro = ("Let's test your knowledge and see what you've learned so far!")
 
 def q1():  
-    answer = ask("What color is the unicorns' fur?") 
+    answer = ask("What color are the unicorns?") 
     if answer == "pink":
         return True
     return False

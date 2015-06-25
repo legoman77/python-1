@@ -9,13 +9,16 @@ chosen_quiz = input("> ")
 
 if chosen_quiz == "fluffy":
     import fluffy as quiz
-if chosen_quiz == "rees":
+elif  chosen_quiz == "rees":
     import myquiz as quiz
+else:
+    print("That is not an option.")
+    exit()
 
 print(c.clear)
 print(quiz.intro)
 
-while quiz. questions:
+while quiz.questions:
     question_function = random.choice(quiz.questions)
     is_correct = question_function()
     if is_correct:
