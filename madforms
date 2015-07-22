@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+
+text = '''A Trip To The Doctor
+
+Once upon a {Noun}, there was a guy named {Name of Person1} who was sick with
+{Adjective1}-itis.  He went to see Dr. {Name of Person2} to get a(n) {Adjective2}
+cure.  {Name of Person1} felt much better after going to the doctor!
+'''
+
+lines = text.splitlines()
+title = lines[0]
+text = "\n".join(lines[1:])
+
+words = {
+    "Noun" : None,
+    "Name of Person1" : None,
+    "Adjective1" : None,
+    "Name of Person2" : None,
+    "Adjective2" : None
+}
+
+for key in words:
+    words[key] = ask(key + ': ')
+
+print(c.clear + c.base3 + title + c.reset)
+print(text.format(**words))
