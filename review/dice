@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+sides = {}
+
+side1 = format('''
+ -------
+|       |
+|   o   |
+|       |
+ -------
+''')
+
+
+side2 = format('''
+ -------
+|o      |
+|       |
+|      o|
+ -------
+''')
+
+
+side3 = format('''
+ -------
+|o      |
+|   o   |
+|      o|
+ -------
+''')
+
+
+side4 = format('''
+ -------
+|o     o|
+|       |
+|o     o|
+ -------
+''')
+
+
+side5 = format('''
+ -------
+|o     o|
+|   o   |
+|o     o|
+ -------
+''')
+
+
+side6 = format('''
+ -------
+|o     o|
+|o     o|
+|o     o|
+ -------
+''')
