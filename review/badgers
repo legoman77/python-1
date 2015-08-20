@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time
+
+print(c.clear)
+while True:
+    for verse in range(5):
+        for verse in range(12):
+            print('Badgers!')
+            time.sleep(0.6)
+        print(c.clear)
+        for verse in range(2):
+            print('Muuushroom!')
+            time.sleep(0.6)
+        print(c.clear)
+    print('Snaaaaaake!')
+    print(c.clear)
+
+

@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import colors as c
+import random
+
+answers = ['Yes','No','Maybe']
+
+print(c.clear)
+print('Welcome to the Amazing Eight Ball!')
+while True:
+    print('What is your question?')
+    question = input('> ')
+    print(random.choice(answers))
+

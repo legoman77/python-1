@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 import colors as c
+import random
+import time
 
-sides = {}
+sides = []
 
 side1 = format('''
  -------
@@ -56,3 +58,15 @@ side6 = format('''
 |o     o|
  -------
 ''')
+
+sides.append(side1)
+sides.append(side2)
+sides.append(side3)
+sides.append(side4)
+sides.append(side5)
+sides.append(side6)
+
+for side in sides:
+    print(c.clear)
+    print(c.random_color() + side)
+    time.sleep(0.5)
